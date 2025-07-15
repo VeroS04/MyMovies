@@ -10,13 +10,13 @@ import type { Movie } from "../../types";
 const HomePage = () => {
 
   const [movies, setMovies] = useState([]);
-  const [popular, setPopular] = useState<Movie[]>([]);
-  const [top, setTop] = useState<Movie[]>([]);
+  //const [popular, setPopular] = useState<Movie[]>([]);
+  //const [top, setTop] = useState<Movie[]>([]);
 
   useEffect(() => {
     movieServices.getUpcoming().then(response => setMovies(response.splice(0, 5)))
-    movieServices.getPopular().then(response => setPopular(response))
-    movieServices.getTop().then(response => setTop(response))
+    //movieServices.getPopular().then(response => setPopular(response))
+    //movieServices.getTop().then(response => setTop(response))
  }, []);
    
   return (

@@ -63,8 +63,7 @@ const DetailsPage = () => {
                   <p>
                     Productoras :{" "}
                     <span>
-                      {details.production_companies
-                        .filter((v, index) => index < 2)
+                      {details.production_companies.slice(0, 2)
                         .map((gen) => gen.name)
                         .join(", ")}
                     </span>
