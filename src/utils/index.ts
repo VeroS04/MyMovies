@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-//const api = axios.create({
- //   baseURL: 'https://my-app-movies-default-rtdb.firebaseio.com'
-//})
+const api = axios.create({
+    baseURL: 'https://mymovieapp-f90b6-default-rtdb.firebaseio.com'
+})
 
 const apiMovies = axios.create({
     baseURL: 'https://api.themoviedb.org/3/',
@@ -12,4 +12,4 @@ const apiMovies = axios.create({
 })
 
 
-export { apiMovies }
+export { apiMovies, api }
