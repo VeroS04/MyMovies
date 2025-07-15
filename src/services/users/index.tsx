@@ -23,8 +23,9 @@ const getBy = async (type: "email" | "token", value: string) => {
   return user;
 };
 
-const update = ({ id, ...rest }: Partial<User>) => {
-  const response = api.patch(`/users/${id}.json`, { ...rest });
+const update = async ({ id, ...rest }: Partial<User>) => {
+  const response = await api.patch(`/users/${id}.json`, { ...rest });
+  return response.data;
 };
 
 export const servicesUser = { add, getAll, update, getBy };

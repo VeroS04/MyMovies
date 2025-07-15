@@ -14,8 +14,8 @@ const HomePage = () => {
 
   useEffect(() => {
     movieServices.getUpcoming().then(response => setMovies(response.splice(0, 5)))
-    //movieServices.getPopular().then(response => setPopular(response))
-    //movieServices.getTop().then(response => setTop(response))
+    movieServices.getPopular().then(response => setPopular(response))
+    movieServices.getTop().then(response => setTop(response))
  }, []);
    
   return (
