@@ -1,6 +1,6 @@
-import { useEffect, useState, type FC } from "react";
+import {  useEffect, useState, type FC } from "react";
 import { Form, InputGroup } from "react-bootstrap";
-import type { Search } from "../../../../types";
+import { type Search } from "../../../types";
 
 type Props = {
   onSearch : (params: Search) => void

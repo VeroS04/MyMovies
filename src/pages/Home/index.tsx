@@ -1,6 +1,7 @@
 
-import { BannerCarousel } from "../../components/common/baner-carrousell";
-import { Layout } from "../../components/layout";
+
+import { BannerCarousel } from "../../components/common/banner-carrousell";
+import { Layout } from "../../components/layout/Layout";
 import { withAuth } from "../../hoc/withAuth";
 import { movieServices } from "../../services/movies";
 import { useEffect, useState } from "react";
@@ -8,8 +9,8 @@ import { useEffect, useState } from "react";
 const HomePage = () => {
 
   const [movies, setMovies] = useState([]);
-  ///const [popular, setPopular] = useState([]);
-  //const [top, setTop] = useState([]);
+  const [popular, setPopular] = useState([]);
+  const [top, setTop] = useState([]);
 
   useEffect(() => {
     movieServices.getUpcoming().then(response => setMovies(response.splice(0, 5)))

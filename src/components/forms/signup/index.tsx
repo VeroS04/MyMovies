@@ -1,17 +1,24 @@
 import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { servicesUser } from "../../../services/users";
+import { type SignUpForm } from "../../../types";
 import "./style.scss";
-import { servicesUser } from "../../../../services/users";
-import type { SignUpForm } from "../../../../types";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const { register, handleSubmit } = useForm<SignUpForm>();
+  const navigate = useNavigate();
 
-  const onSubmit = (data: SignUpForm) => {
-    servicesUser.add({
-      ...data,
-      birthdate: new Date(data.birthdate),
-    });
+  const onSubmit = async (data: SignUpForm) => {
+    try {
+      await servicesUser.add({
+        ...data,
+        birthdate: new Date(data.birthdate),
+      });
+      navigate("/login");
+    }catch (error) {
+      console.error("Error al crear usuario");
+    }
   };
 
   return (

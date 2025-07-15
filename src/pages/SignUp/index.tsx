@@ -1,5 +1,5 @@
-import { SignUpForm } from "../../components/common/forms";
-import { Layout } from "../../components/layout";
+import { Layout } from "../../components";
+import { SignUpForm } from "../../components/forms";
 import { withAuth } from "../../hoc/withAuth";
 
 
