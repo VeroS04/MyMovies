@@ -5,7 +5,7 @@ import { Layout } from "../../components/layout/Layout";
 import { withAuth } from "../../hoc/withAuth";
 import { movieServices } from "../../services/movies";
 import { useEffect, useState } from "react";
-import type { Movie } from "../../types";
+//import type { Movie } from "../../types";
 
 const HomePage = () => {
 
