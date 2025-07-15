@@ -1,8 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useMe } from "../../../../hooks/useMe";
-import type { LoginForm } from "../../../../types";
-
+import { type LoginForm } from "../../../types";
+import { useMe } from "../../../hooks/useMe";
 
 const Login = () => {
   const { register, handleSubmit } = useForm<LoginForm>();

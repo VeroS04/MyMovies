@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, Login, SignUp } from "./pages";
+import { Classics, Details, Home, Login, NewMovies, SearchP, SignUp } from "./pages";
 import { useMe } from "./hooks/useMe";
 
 
@@ -19,19 +19,14 @@ function App() {
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
-          
+          <Route path="new-releases" element={<NewMovies />} />
+          <Route path="search" element={<SearchP />} />
+          <Route path="popular" element={<Classics />} />
+          <Route path="movies/:id"  element={<Details/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
-//          <Route path="login" element={<Login />} />
-///          <Route path="signup" element={<SignUp />} />
-///          <Route path="new-releases" element={<NewReleases />} />
-//          <Route path="search" element={<SearchP />} />
- //         <Route path="popular" element={<Popular />} />
- //         <Route path="movies/:id"  element={<Details/>}/>
-
 
 export default App;

@@ -1,7 +1,7 @@
 export { Home } from "./Home";
-//export { Popular } from "./Popular";
-//export { NewReleases } from "./NewReleases";
+export { Classics } from "./Classics";
+export { NewMovies } from "./NewMovies";
 export { Login } from "./Login";
-//export { SearchP } from "./SearchP";
+export { SearchP } from "./SearchP";
 export { SignUp } from "./SignUp";
-//export { Details } from "./Details";
+export { Details } from "./Details";
