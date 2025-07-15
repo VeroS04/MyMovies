@@ -5,12 +5,13 @@ import { Layout } from "../../components/layout/Layout";
 import { withAuth } from "../../hoc/withAuth";
 import { movieServices } from "../../services/movies";
 import { useEffect, useState } from "react";
+import type { Movie } from "../../types";
 
 const HomePage = () => {
 
   const [movies, setMovies] = useState([]);
-  const [popular, setPopular] = useState([]);
-  const [top, setTop] = useState([]);
+  const [popular, setPopular] = useState<Movie[]>([]);
+  const [top, setTop] = useState<Movie[]>([]);
 
   useEffect(() => {
     movieServices.getUpcoming().then(response => setMovies(response.splice(0, 5)))
