@@ -1,17 +1,22 @@
-import { useEffect, useState } from "react";
+
 import { BannerCarousel } from "../../components/common/baner-carrousell";
 import { Layout } from "../../components/layout";
-import { movieServices } from "../../services";
+import { withAuth } from "../../hoc/withAuth";
+import { movieServices } from "../../services/movies";
+import { useEffect, useState } from "react";
 
-const [movies, setMovies] = useState([]);
+const HomePage = () => {
 
-useEffect(() => {
+  const [movies, setMovies] = useState([]);
+  ///const [popular, setPopular] = useState([]);
+  //const [top, setTop] = useState([]);
+
+  useEffect(() => {
     movieServices.getUpcoming().then(response => setMovies(response.splice(0, 5)))
     //movieServices.getPopular().then(response => setPopular(response))
     //movieServices.getTop().then(response => setTop(response))
  }, []);
-
-const Home = () => {
+   
   return (
     <Layout>
       <BannerCarousel movies={movies} />
@@ -19,4 +24,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export const Home = withAuth(HomePage);
