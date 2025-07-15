@@ -1,2 +1,2 @@
 //export { useMe } from './useMe';
-//export { useParam } from './useParam';
+export { useParam } from './useParam';

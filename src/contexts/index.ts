@@ -1,2 +1,2 @@
 //export { StoreContext, StoreProvider } from './store';
-//export { AuthContext, AuthProvider } from './auth'
+export { AuthContext, AuthProvider } from './auth'
