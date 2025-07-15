@@ -1,10 +1,8 @@
 import { useContext } from "react";
-//import { servicesUser } from "../../services/users";
-
 import { AuthContext } from "../../contexts";
 import { tokenGenerator } from "../../helpers/tokenGenerator";
-import type { LoginForm, User } from "../../types";
 import { servicesUser } from "../../services/users";
+import type { LoginForm, User } from "../../types";
 
 const useMe = () => {
   const { me, setMe } = useContext(AuthContext);
@@ -26,7 +24,7 @@ const useMe = () => {
     }
   };
 
-  const signup = (user: Omit<User, "id">) => {};
+ const signup = (_user: Omit<User, "id">) => {};
 
   const forgotPassword = () => {};
 
